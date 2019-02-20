@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js"
+        ]
+      }
+    ],
+    "react/prop-types": "off",
+    "indent": "off",
+    "react/display-name": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "16.4.2"
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/test/**/*.spec.js"
+      ],
+      "globals": {
+        "jest": true,
+        "describe": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "it": true,
+        "expect": true
+      }
+    }
+  ]
+}

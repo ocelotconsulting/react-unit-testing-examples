@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputForm matches snapshot 1`] = `
+<form>
+  <div>
+    <label
+      htmlFor="registration-form-name"
+    >
+      Name: 
+    </label>
+    <input
+      id="registration-form-name"
+      onChange={[Function]}
+      type="text"
+      value="Marge Simpson"
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="registration-form-address"
+    >
+      Mailing Address: 
+    </label>
+    <input
+      id="registration-form-address"
+      onChange={[Function]}
+      type="text"
+      value="123 Fake Street"
+    />
+  </div>
+  <div>
+    <button
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Submit
+    </button>
+  </div>
+</form>
+`;

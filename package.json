@@ -1,0 +1,52 @@
+{
+  "name": "react-unit-testing-examples",
+  "version": "1.0.0",
+  "description": "react unit testing examples",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "jest",
+    "test:dev": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ocelotconsulting/react-unit-testing-examples.git"
+  },
+  "keywords": [
+    "react",
+    "enzyme",
+    "unit",
+    "testing"
+  ],
+  "author": "John O'Malley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ocelotconsulting/react-unit-testing-examples/issues"
+  },
+  "homepage": "https://github.com/ocelotconsulting/react-unit-testing-examples#readme",
+  "devDependencies": {
+    "@babel/core": "~7.3.3",
+    "@babel/plugin-proposal-class-properties": "~7.3.0",
+    "@babel/plugin-transform-runtime": "~7.2.0",
+    "@babel/preset-env": "~7.3.1",
+    "@babel/preset-react": "~7.0.0",
+    "@babel/runtime": "~7.3.1",
+    "babel-eslint": "~10.0.1",
+    "babel-jest": "~24.1.0",
+    "enzyme": "~3.9.0",
+    "enzyme-adapter-react-16": "~1.9.1",
+    "enzyme-to-json": "~3.3.5",
+    "eslint": "~5.14.1",
+    "eslint-config-standard": "~12.0.0",
+    "eslint-plugin-import": "~2.16.0",
+    "eslint-plugin-node": "~8.0.1",
+    "eslint-plugin-promise": "~4.0.1",
+    "eslint-plugin-react": "~7.12.4",
+    "eslint-plugin-standard": "~4.0.0",
+    "jest": "~24.1.0",
+    "prop-types": "~15.7.2",
+    "react": "~16.8.2",
+    "react-dom": "~16.8.2"
+  }
+}
