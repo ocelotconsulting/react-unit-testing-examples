@@ -18,6 +18,24 @@ describe('InputForm', () => {
 
   const shallowRender = () => shallow(<InputForm {...props}/>)
 
+  const isSubmitEnabled = () => !shallowRender().find('button').prop('disabled')
+
+  it('disables submit button when name is empty', () => {
+    props.name = ' '
+
+    expect(isSubmitEnabled()).toBe(false)
+  })
+
+  it('disables submit button when address is empty', () => {
+    props.address = ''
+
+    expect(isSubmitEnabled()).toBe(false)
+  })
+
+  it('enables submit button when name and address are non-empty', () => {
+    expect(isSubmitEnabled()).toBe(true)
+  })
+
   const getBoundProperties = wrapper => {
     const instance = wrapper.instance()
     return [
@@ -51,24 +69,6 @@ describe('InputForm', () => {
 
   it('binds submit button onClick handler', () => {
     expect(shallowRender().find('button').prop('onClick')).toBe(props.onSubmit)
-  })
-
-  const isSubmitEnabled = () => !shallowRender().find('button').prop('disabled')
-
-  it('disables submit button when name is empty', () => {
-    props.name = ' '
-
-    expect(isSubmitEnabled()).toBe(false)
-  })
-
-  it('disables submit button when address is empty', () => {
-    props.address = ''
-
-    expect(isSubmitEnabled()).toBe(false)
-  })
-
-  it('enables submit button when name and address are non-empty', () => {
-    expect(isSubmitEnabled()).toBe(true)
   })
 
   it('matches snapshot', () => {
