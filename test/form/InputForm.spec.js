@@ -46,11 +46,12 @@ describe('InputForm', () => {
 
   it('binds to fields', () => {
     const wrapper = shallowRender()
-    const fieldProps = wrapper.find('input').map(input => input.props())
+    const fieldProps = wrapper.find('input').map(input => {
+      const { value, onChange } = input.props()
+      return { value, onChange }
+    })
 
     expect(fieldProps).toEqual(getBoundProperties(wrapper).map(({ property, onChange }) => ({
-      id: `registration-form-${property}`,
-      type: 'text',
       value: props[property],
       onChange
     })))
